@@ -15,9 +15,14 @@ Criar uma interface acessível, funcional e intuitiva, respeitando os princípio
 
 ## 📁 Estrutura do Projeto
 Acessibilidade/ # Funcionalidades relacionadas à acessibilidade
+
 Cadastro/ # Telas de cadastro e formulários
+
 CSS/ # Folhas de estilo
+
 JS/ # Scripts em JavaScript
+
 imagem/ # Recursos visuais (ícones, imagens)
+
 índice.html # Página inicial
 
