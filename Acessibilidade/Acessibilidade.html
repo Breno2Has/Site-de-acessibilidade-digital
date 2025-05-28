@@ -1,0 +1,143 @@
+<!DOCTYPE html
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nossas Acessibilidade</title>
+  <style>
+    body {
+      font-family: "popins", sans-serif;
+      line-height: 1.6;
+      background-color: #fff;
+      color: #000;
+    }
+    .acessibilidade-bar {
+      background: #87c4de;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      border-radius: 15px;
+    }
+    .aula-container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 20px;
+    }
+    .alto-contraste {
+      background-color: #000;
+      color: #fcfcfa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de acessibilidade -->
+  <div class="acessibilidade-bar">
+    <button onclick="toggleContraste()">Alternar Contraste</button>
+    <button onclick="aumentarFonte()">A+</button>
+    <button onclick="diminuirFonte()">A-</button>
+    <button onclick="lerPagina()">🔊 Ler Página</button>
+  </div>
+
+  <main class="aula-container" id="conteudo">
+
+    <h1 tabindex="0"> Acessibilidade Digital</h1>
+    <p tabindex="0">
+      Esta aula aborda os conceitos fundamentais de acessibilidade digital, incluindo boas práticas para tornar a web mais inclusiva.
+    </p>
+    <img src="acessibilidade_inclusao_em_foco_0_0.jpeg">
+    
+    <h2 tabindex="0">📝 Transcrição</h2>
+    <p tabindex="0">
+      Acessibilidade e Inclusão: Caminhos para uma Sociedade Mais Justa
+Acessibilidade e inclusão são pilares fundamentais para a construção de uma sociedade mais justa, democrática e igualitária. A acessibilidade diz respeito à eliminação de barreiras físicas, tecnológicas, comunicacionais e atitudinais, permitindo que todas as pessoas, independentemente de suas condições físicas, sensoriais ou cognitivas, possam participar plenamente da vida em sociedade.
+
+Já a inclusão vai além: trata-se de garantir que todas as pessoas sejam reconhecidas, respeitadas e valorizadas em sua diversidade. Isso significa criar ambientes — seja na escola, no trabalho, nos serviços públicos ou na internet — que acolham as diferenças e promovam a participação ativa de todos.
+
+Investir em acessibilidade e práticas inclusivas não beneficia apenas pessoas com deficiência. Crianças, idosos, pessoas com mobilidade reduzida temporária, entre outros grupos, também se beneficiam de um mundo mais acessível. Rampas, sinalização adequada, legendas em vídeos, leitura de telas e linguagem simples são exemplos de recursos que tornam o cotidiano mais democrático.
+
+Portanto, acessibilidade e inclusão não são favores ou concessões, mas sim direitos fundamentais. Promovê-los é um compromisso ético e social de todos nós.
+    </p>
+
+    <h2 tabindex="0">📄 Material Complementar</h2>
+    <p>✅ Checklist de Acessibilidade
+📍 Acessibilidade Física
+ Há rampas de acesso com inclinação adequada?
+
+ As portas e corredores são largos o suficiente para cadeiras de rodas?
+
+ Há sinalização tátil no chão (piso tátil)?
+
+ Existem banheiros adaptados e acessíveis?
+
+ O local possui vagas reservadas para pessoas com deficiência?
+
+🧏‍♀️ Acessibilidade Comunicacional
+ Há materiais disponíveis em braille ou áudio?
+
+ O local ou serviço oferece atendimento em Libras?
+
+ A sinalização no ambiente é clara, com pictogramas compreensíveis?
+
+ Informações importantes estão acessíveis em linguagem simples?
+
+💻 Acessibilidade Digital
+ O site ou aplicativo é compatível com leitores de tela?
+
+ Os links, botões e menus são acessíveis por teclado?
+
+ Imagens têm texto alternativo (alt text)?
+
+ Os vídeos possuem legendas e/ou intérprete de Libras?
+
+ O contraste entre texto e fundo é adequado para leitura?
+
+👥 Acessibilidade Atitudinal
+ Os colaboradores receberam treinamento sobre inclusão?
+
+ Existe empatia e respeito ao se comunicar com pessoas com deficiência?
+
+ As diferenças são acolhidas e valorizadas no ambiente?
+
+📚 Acessibilidade Metodológica (especialmente em escolas e cursos)
+ Os materiais didáticos são adaptados às necessidades dos alunos?
+
+ Há flexibilidade na forma de avaliação e participação?
+
+ O plano pedagógico inclui estratégias inclusivas?</p>
+
+    <h2 tabindex="0">📬 Dúvidas?</h2>
+    <p tabindex="0">
+      Envie sua dúvida para <a href="mailto:Unily@gmail.com.br">Unily@gmail.com.br</a>
+    </p>
+
+  </main>
+
+  <script>
+    function toggleContraste() {
+      document.body.classList.toggle("alto-contraste");
+    }
+
+    function aumentarFonte() {
+      document.body.style.fontSize = "larger";
+    }
+
+    function diminuirFonte() {
+      document.body.style.fontSize = "smaller";
+    }
+
+    function lerPagina() {
+      const texto = document.getElementById("conteudo").innerText;
+      const fala = new SpeechSynthesisUtterance(texto);
+      speechSynthesis.speak(fala);
+    }
+  </script>
+
+</body>
+</html>
